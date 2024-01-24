@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="ES">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <title> SEM 107</title>
+
+</head>
+
+<body>
+    <header>
+        <div id="header-icon">
+        <img id="logo" src="imagenes/logo1.png" alt="Logo">
+        <span>R.O</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Dotación</a></li>
+                <li><a href="#">Teléfonos</a></li>
+                <li><a href="#">Protocolos</a></li>
+                <li><a href="#">Gelocolalización</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<hr>
+
+    <main>
+    <div class="boxing">
+        <section>
+            <article>
+                <h2>PROTOCOLOS</h2>
+                <p>Tarjetas de protocolos</p>
+                <div id="contenedor-imagenes">
+                    <div id="imagenes">
+                <img src="Imagenes/1.jpg" alt="Identificación">
+                <img src="Imagenes/2.jpg" alt="Instrucciones Post-despacho">
+                <img src="Imagenes/3.jpg" alt="Incidente de Tránsito">
+                <img src="Imagenes/4.jpg" alt="Caída de Altura">
+                <img src="Imagenes/5.jpg" alt="Paciente Inconsciente">
+                <img src="Imagenes/6.jpg" alt="RCP asistida por teléfono">
+                <img src="Imagenes/7.jpg" alt="Asfixia por Inmersión">
+                <img src="Imagenes/8.jpg" alt="RCP asistida por teléfono">
+                <img src="Imagenes/9.jpg" alt="Electrocución">
+                <img src="Imagenes/10.jpg" alt="Problemas Respiratorios">
+                <img src="Imagenes/11.jpg" alt="OVACE">
+                <img src="Imagenes/12.jpg" alt="Maniobra de Heimlich">
+                <img src="Imagenes/13.jpg" alt="Dolor de Pecho">
+                <img src="Imagenes/14.jpg" alt="Hemorrragia">
+                <img src="Imagenes/15.jpg" alt="Convulsión">
+                <img src="Imagenes/16.jpg" alt="Quemaduras">
+                <img src="Imagenes/17.jpg" alt="ACV">
+            </div>              
+            </article>
+            <div class="botones">
+            <div id="anterior"><img class="ambu-izq" src="imagenes/ambu izq.png" alt="ambu izq"></div>
+            <div id="siguiente"><img class="ambu-der" src="imagenes/ambu der.png" alt="ambu der"></div>
+          </div> 
+        </div>
+        </section>
+    </div>
+        <hr>
+    <div>
+        <aside>
+            <span>Despachos diaros</span>
+            <fieldset>
+              <legend>Movil 1</legend>
+                <form>
+                    <label for="Despachos1">Despachos</label>
+                    <input type="number" name="Despachos" min="0" max="10" id="Despachos1">
+                </form>
+            </fieldset>
+            <fieldset>
+              <legend>Movil 2</legend>
+                <form>
+                    <label for="Despachos2">Despachos</label>
+                    <input type="number" name="Despachos" min="0" max="10" id="Despachos2">
+                </form>
+            </fieldset>
+            <fieldset>
+              <legend>Movil 3</legend>
+                <form>
+                    <label for="Despachos3">Despachos</label>
+                    <input type="number" name="Despachos" min="0" max="10" id="Despachos3">
+                </form>
+            </fieldset>
+            <fieldset>
+              <legend>Movil 4</legend>
+                <form>
+                    <label for="Despachos4">Despachos</label>
+                    <input type="number" name="Despachos" min="0" max="10" id="Despachos4">
+                </form>
+            </fieldset>
+            <fieldset>
+              <legend>Movil 5</legend>
+                <form>
+                    <label for="Despachos5">Despachos</label>
+                    <input type="number" name="Despachos" min="0" max="10" id="Despachos5">
+                </form>
+            </fieldset>
+    </div>
+    </main>
+    <hr>
+    <footer>
+        <span id="henry">Esta página se realizó como trabajo práctico del Prepcourse de Henry @Derechos libres</span>
+        <div class="footer">
+        <h3>Gonzalo Gaspar Gaita</h3>
+        <h3>Tel 2954-229395</h3>
+      </div>
+    </footer>
+<hr>
+
+    <script>
+        let currentIndex = 0;
+        const totalImages = document.querySelectorAll('img').length;
+        const container = document.getElementById('imagenes');
+        const prevBtn = document.getElementById('anterior');
+        const nextBtn = document.getElementById('siguiente');
+      
+        prevBtn.addEventListener('click', () => changeImage(-1));
+        nextBtn.addEventListener('click', () => changeImage(1));
+      
+        function changeImage(direction) {
+          currentIndex += direction;
+      
+          if (currentIndex < 0) {
+            currentIndex = totalImages - 1;
+          } else if (currentIndex >= totalImages) {
+            currentIndex = 0;
+          }
+      
+          const translateValue = -currentIndex * 100 + '%';
+          container.style.transform = 'translateX(' + translateValue + ')';
+        }
+      </script>
+</body>
+</html>

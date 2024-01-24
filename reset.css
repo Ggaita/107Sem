@@ -1,0 +1,130 @@
+/* reset.css */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove text decoration on a elements */
+a {
+  text-decoration: none;
+}
+
+/* A better looking default horizontal rule */
+hr {
+  height: 1px;
+  margin: 0.5em 0;
+  color: inherit;
+  background-color: currentcolor;
+  border: none;
+}
+
+/* Remove border on images inside links in IE 10/11 */
+img {
+  border-style: none;
+}
+
+/* Reset font styles for heading elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  margin: 0;
+}
+
+/* Reset form elements to make them consistent across browsers */
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+/* 1. Correct the inability to style clickable types in iOS and Safari. */
+/* 2. Remove the inner padding in Chrome and Safari on macOS. */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+appearance: button;
+}
+
+/* Remove the inheritance of text transform in Edge and Firefox. */
+/* 1. Remove the margin in Firefox. */
+/* 2. Remove the inheritance of text transform in Firefox. */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+/* Reset input[type="number"] appearance */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* Reset quote style in Edge and Safari */
+blockquote {
+  quotes: none;
+  border: none;
+}
+
+/* Reset unordered list default style in Edge and Safari */
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Reset padding in Firefox */
+figure {
+  margin: 0;
+}
+
+/* Reset padding in Firefox */
+[hidden] {
+  display: none;
+}
